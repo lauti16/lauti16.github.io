@@ -1,0 +1,159 @@
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Nav
+===============
+*/
+nav {
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  background-color: rgb(252, 252, 249);
+  box-shadow: 0px 10px 10px 1px rgb(108, 103, 103);
+}
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nav-center h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: rgb(32, 66, 160);
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-style: italic;
+}
+.nav-links {
+  display: flex;
+}
+nav a {
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: black;
+  margin-right: 1.5rem;
+  margin-right: 20px;
+  letter-spacing: 1.5px;
+
+}
+nav a:hover { 
+    color: rgb(12, 125, 125);
+}
+/*
+=============== 
+Container
+===============
+*/
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h2 {
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
+}
+
+.btn-hero {
+  text-transform: uppercase;
+  background: transparent;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  border: 2px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover {
+background-color: rgba(235, 242, 242, 0.525);
+transform: scale(1.05,1);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <title>To do List</title>
+</head>
+
+<body>
+    <div class="list roundBorder">
+        <div class="date">
+            <div class="dateRight">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <!-- onsumbit: cuando se envie, se ejecuta la funcion addnewtask (agregar nueva tarea) -->
+        <form onsubmit="AddNewTask(event)">
+            <!-- autocomplete: es para que no se vea el historial - placeholder: texto que aparece en el input antes de escribir -->
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva Tarea" class="roundBorder" >
+            <button type="submit" class="addTaskButton">+</button>
+            <!-- onclick: cuando se haga click -->
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTask()">Ordenar</button>
+        </form>
+        <!-- en este div se van a ir cargando todas las tareas -->
+        <div id="tasksContainer"></div>
+    </div>
+</body>
+
+</html>
